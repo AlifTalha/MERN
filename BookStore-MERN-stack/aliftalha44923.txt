@@ -1,0 +1,5 @@
+aliftalha44923
+
+PYR3DvBGXVO1v7N8
+
+mongodb://aliftalha44923:<db_password>@undefined/?replicaSet=atlas-vxbnlu-shard-0&ssl=true&authSource=admin
