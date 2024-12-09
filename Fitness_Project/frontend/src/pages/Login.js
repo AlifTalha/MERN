@@ -1,96 +1,4 @@
 
-
-
-// import React, { useState, useContext } from "react";
-// import { useNavigate } from "react-router-dom";
-// import { loginUser } from "../utils/api";
-// import { AuthContext } from "../context/AuthContext";
-// import "./Login.css";
-
-// const Login = () => {
-//   const [formData, setFormData] = useState({ username: "", password: "" });
-//   const { login } = useContext(AuthContext);
-//   const navigate = useNavigate();
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     try {
-//       const { data } = await loginUser(formData);
-//       login(data.token, data.username); // Pass token and username to AuthContext
-//       navigate("/dashboard");
-//     } catch (err) {
-//       console.error(err.response.data.error);
-//     }
-//   };
-
-//   return (
-//     <div
-//       style={{
-//         maxWidth: "400px",
-//         margin: "50px auto",
-//         padding: "20px",
-//         border: "1px solid #ddd",
-//         borderRadius: "8px",
-//         backgroundColor: "white",
-//         boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
-//       }}
-//     >
-//       <h2 style={{ textAlign: "center", marginBottom: "20px" }}>Login</h2>
-//       <form onSubmit={handleSubmit}>
-//         <input
-//           type="text"
-//           placeholder="Username"
-//           value={formData.username}
-//           onChange={(e) =>
-//             setFormData({ ...formData, username: e.target.value })
-//           }
-//           style={{
-//             width: "100%",
-//             padding: "10px",
-//             marginBottom: "15px",
-//             border: "1px solid #ccc",
-//             borderRadius: "4px",
-//           }}
-//         />
-//         <input
-//           type="password"
-//           placeholder="Password"
-//           value={formData.password}
-//           onChange={(e) =>
-//             setFormData({ ...formData, password: e.target.value })
-//           }
-//           style={{
-//             width: "100%",
-//             padding: "10px",
-//             marginBottom: "15px",
-//             border: "1px solid #ccc",
-//             borderRadius: "4px",
-//           }}
-//         />
-//         <button
-//           type="submit"
-//           style={{
-//             width: "100%",
-//             backgroundColor: "#007bff",
-//             color: "white",
-//             border: "none",
-//             padding: "10px",
-//             borderRadius: "4px",
-//             cursor: "pointer",
-//           }}
-//         >
-//           Login
-//         </button>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default Login;
-
-
-
-
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../utils/api";
@@ -99,90 +7,80 @@ import "./Login.css";
 
 const Login = () => {
   const [formData, setFormData] = useState({ username: "", password: "" });
+  const [errorMessage, setErrorMessage] = useState(""); // For error messages
+  const [successMessage, setSuccessMessage] = useState(""); // For success message
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     try {
-//       const { data } = await loginUser(formData);
-//       login(data.token, data.username); // Pass token and username to AuthContext
-//       navigate("/dashboard");
-//     } catch (err) {
-//       console.error(err.response.data.error);
-//     }
-//   };
-const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrorMessage(""); // Clear any previous errors
+    setSuccessMessage(""); // Clear any previous success message
+
+    if (!formData.username) {
+      setErrorMessage("Please enter a valid username.");
+      return;
+    }
+
+    if (!formData.password) {
+      setErrorMessage("Please enter a valid password.");
+      return;
+    }
+
     try {
       const { data } = await loginUser(formData);
-      login(data.token, data.username); // Ensure data.username exists in API response
-      navigate("/dashboard");
+      login(data.token, data.username); // Ensure your API returns token and username
+      setSuccessMessage("Successfully Login!");
+      setTimeout(() => navigate("/dashboard"), 2000); // Redirect after 2 seconds
     } catch (err) {
-      console.error(err.response?.data?.error || "Login failed");
+      setErrorMessage(err.response?.data?.error || "Login failed. Please try again.");
     }
   };
-  
 
   return (
-    <div
-      style={{
-        maxWidth: "400px",
-        margin: "50px auto",
-        padding: "20px",
-        border: "1px solid #ddd",
-        borderRadius: "8px",
-        backgroundColor: "white",
-        boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
-      }}
-    >
-      <h2 style={{ textAlign: "center", marginBottom: "20px" }}>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Username"
-          value={formData.username}
-          onChange={(e) =>
-            setFormData({ ...formData, username: e.target.value })
-          }
-          style={{
-            width: "100%",
-            padding: "10px",
-            marginBottom: "15px",
-            border: "1px solid #ccc",
-            borderRadius: "4px",
-          }}
+    <div className="login-page">
+      <video className="background-video" autoPlay muted loop>
+        <source
+          src="https://videos.pexels.com/video-files/3175515/3175515-sd_640_360_25fps.mp4"
+          type="video/mp4"
         />
-        <input
-          type="password"
-          placeholder="Password"
-          value={formData.password}
-          onChange={(e) =>
-            setFormData({ ...formData, password: e.target.value })
-          }
-          style={{
-            width: "100%",
-            padding: "10px",
-            marginBottom: "15px",
-            border: "1px solid #ccc",
-            borderRadius: "4px",
-          }}
-        />
-        <button
-          type="submit"
-          style={{
-            width: "100%",
-            backgroundColor: "#007bff",
-            color: "white",
-            border: "none",
-            padding: "10px",
-            borderRadius: "4px",
-            cursor: "pointer",
-          }}
-        >
-          Login
-        </button>
-      </form>
+        Your browser does not support the video tag.
+      </video>
+      <div className="login-container">
+        <h2>Login</h2>
+
+        {errorMessage && (
+          <div className="error-message">
+            {errorMessage}
+          </div>
+        )}
+
+        {successMessage && (
+          <div className="success-message">
+            {successMessage}
+          </div>
+        )}
+
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Username"
+            value={formData.username}
+            onChange={(e) =>
+              setFormData({ ...formData, username: e.target.value })
+            }
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={formData.password}
+            onChange={(e) =>
+              setFormData({ ...formData, password: e.target.value })
+            }
+          />
+          <button type="submit">Login</button>
+        </form>
+      </div>
     </div>
   );
 };

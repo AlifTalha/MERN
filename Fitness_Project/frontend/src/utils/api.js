@@ -22,3 +22,4 @@ export const fetchExercises = () => API.get("/exercises/");
 export const addExercise = (exerciseData) => API.post("/exercises/add", exerciseData);
 export const updateExercise = (id, exerciseData) => API.post(`/exercises/update/${id}`, exerciseData);
 export const deleteExercise = (id) => API.delete(`/exercises/${id}`);
+

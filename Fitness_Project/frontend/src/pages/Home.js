@@ -1,11 +1,15 @@
+//talha
+
 import React, { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
 
 const Home = () => {
   const [quote, setQuote] = useState("");
+  const [time, setTime] = useState(new Date().toLocaleTimeString()); // State for live clock
   const navigate = useNavigate();
 
+  
   const generateQuote = useCallback(() => {
     const motivationalQuotes = [
       "The secret of getting ahead is getting started.",
@@ -18,14 +22,35 @@ const Home = () => {
     setQuote(motivationalQuotes[randomIndex]);
   }, []);
 
+  // Update the live clock every second
   useEffect(() => {
-    generateQuote();
+    const timer = setInterval(() => {
+      setTime(new Date().toLocaleTimeString());
+    }, 1000);
+    return () => clearInterval(timer); // Cleanup interval on component unmount
+  }, []);
+
+  useEffect(() => {
+    generateQuote(); // Generate a quote on initial render
   }, [generateQuote]);
 
   return (
     <div className="home-container">
+      {/* Video Background */}
+      <video autoPlay loop muted className="background-video">
+        <source
+          src="https://cdn.pixabay.com/video/2023/01/27/148208-793717949_tiny.mp4" // Example video URL
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+
       <div className="overlay">
         <h1>Welcome to the Fitness Tracker!</h1>
+
+        {/* Live Clock */}
+        <p className="live-clock">Current Time: {time}</p>
+
         <p className="quote">{quote}</p>
         <button className="generate-quote-btn" onClick={generateQuote}>
           Get Inspired!

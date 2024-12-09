@@ -1,23 +1,58 @@
-/* src/pages/Login.css */
-.login-container,
-.register-container {
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  /* Fallback in case the video doesn't load */
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.login-container {
+  z-index: 1;
+  width: 100%;
   max-width: 400px;
-  margin: 50px auto;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.login-container h2,
-.register-container h2 {
+.error-message {
+  color: red;
+  background: #f8d7da;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.success-message {
+  color: green;
+  background: #d4edda;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.login-container h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.login-container form input,
-.register-container form input {
+.login-container form input {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -25,7 +60,12 @@
   border-radius: 4px;
 }
 
-.login-container form button,
-.register-container form button {
+.login-container form button {
   width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
 }

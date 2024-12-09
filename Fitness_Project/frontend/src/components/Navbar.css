@@ -1,32 +1,52 @@
-/* src/components/Navbar.css */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: #343a40;
-    color: white;
-  }
-  
-  nav a {
-    color: white;
-    margin-right: 15px;
-    font-size: 16px;
-  }
-  
-  nav a:hover {
-    color: #ffd700;
-  }
-  
-  nav button {
-    background-color: #ff6b6b;
-    padding: 8px 12px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-  }
-  
-  nav button:hover {
-    background-color: #ff3d3d;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #d7a37b;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  text-decoration: none;
+  margin: 0 1rem;
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+nav button {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+nav button:hover {
+  background-color: #0056b3;
+}
+
+/* Center Home and About links */
+nav div.center-links {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+nav div.right-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+}

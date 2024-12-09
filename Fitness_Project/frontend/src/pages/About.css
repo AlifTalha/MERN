@@ -1,0 +1,116 @@
+
+
+   /* Background Image */
+.background-image {
+    background-image: url("https://images.unsplash.com/photo-1487956382158-bb926046304a?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  
+  .vision-section {
+    text-align: center;
+  }
+  
+  .vision-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .vision-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  /* About Us Section */
+  .about-us-section {
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #9e8a8a;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .about-us-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-us-section p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  
+  /* Info Section (Two Vertical Divs) */
+  .info-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+  
+  .info-box {
+    flex: 1;
+    margin: 0 1rem;
+    padding: 1.5rem;
+    background-color: #8ccf97;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .info-box p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  /* Social Media Links */
+  .social-links {
+    margin: 2rem auto;
+    text-align: center;
+  }
+  
+  .social-links h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .social-links a img {
+    width: 40px;
+    height: 40px;
+  }
+  .social-links {
+    margin: 2rem auto;
+    text-align: center;
+    padding: 2rem;
+    background-color: #313b3c; /* Light blue background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    color: white; /* White text for better contrast */
+  }
+  
+  .social-links a:hover {
+    transform: scale(1.1);
+  }
+  

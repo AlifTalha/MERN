@@ -1,37 +1,6 @@
 
 
 
-
-// import React, { useContext } from "react";
-// import { Link } from "react-router-dom";
-// import { AuthContext } from "../context/AuthContext";
-
-// const Navbar = () => {
-//   const { token, logout } = useContext(AuthContext);
-
-//   return (
-//     <nav>
-//       <Link to="/">Home</Link>
-//       {token ? (
-//         <>
-//           <Link to="/dashboard">Dashboard</Link>
-//           <button onClick={logout}>Logout</button>
-//         </>
-//       ) : (
-//         <>
-//           <Link to="/login">Login</Link>
-//           <Link to="/register">Register</Link>
-//         </>
-//       )}
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
-
-
-
-
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
@@ -49,18 +18,26 @@ const Navbar = () => {
 
   return (
     <nav>
-      <Link to="/">Home</Link>
-      {token ? (
-        <>
-          <Link to="/dashboard">Dashboard</Link>
-          <button onClick={logout}>Logout</button>
-        </>
-      ) : (
-        <>
-          <Link to="/login">Login</Link>
-          <Link to="/register">Register</Link>
-        </>
-      )}
+      {/* Centered links */}
+      <div className="center-links">
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+      </div>
+
+      {/* Right-aligned links */}
+      <div className="right-links">
+        {token ? (
+          <>
+            <Link to="/dashboard">Dashboard</Link>
+            <button onClick={logout}>Logout</button>
+          </>
+        ) : (
+          <>
+            <Link to="/login">Login</Link>
+            <Link to="/register">Register</Link>
+          </>
+        )}
+      </div>
     </nav>
   );
 };
