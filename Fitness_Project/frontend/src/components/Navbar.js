@@ -20,9 +20,11 @@ const Navbar = () => {
     <nav>
       {/* Centered links */}
       <div className="center-links">
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-      </div>
+  <Link to="/">Home</Link>
+  <Link to="/about">About</Link>
+  <Link to="/contact">Contact Us</Link> {/* New Contact Us link */}
+</div>
+
 
       {/* Right-aligned links */}
       <div className="right-links">

@@ -3,14 +3,14 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #d7a37b;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #2b3032;
+  box-shadow: 0 2px 4px rgba(198, 66, 66, 0.1);
 }
 
 nav a {
   text-decoration: none;
   margin: 0 1rem;
-  color: #333;
+  color: #ffffff;
   font-size: 1rem;
   font-weight: bold;
   transition: color 0.3s;

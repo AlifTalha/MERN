@@ -1,0 +1,119 @@
+
+
+   .contact-container {
+    padding: 2rem;
+    background-color: #121212;
+    color: #f3f3f3;
+}
+
+.contact-container h2 {
+    text-align: center;
+    color: #7ed957;
+    margin-bottom: 1.5rem;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ff4500;
+    border-radius: 5px;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #7ed957;
+    outline: none;
+}
+
+.submit-btn {
+    padding: 0.8rem 2rem;
+    background-color: #ff4500;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #e63900;
+}
+
+.contact-image {
+    flex: 1;
+    text-align: center;
+}
+
+.contact-image img {
+    max-width: 360px;
+    border-radius: 12px;
+}
+
+/* New styles for the comments section */
+.comments-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    border: 1px solid #7ed957;
+}
+
+.comments-section h3 {
+    text-align: center;
+    color: #7ed957;
+    margin-bottom: 1rem;
+}
+
+.comments-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comments-section .comment {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #7ed957;
+}
+
+.comments-section .comment h4 {
+    font-size: 1.2rem;
+    color: #ff4500;
+    margin-bottom: 0.3rem;
+}
+
+.comments-section .comment p {
+    font-size: 1rem;
+    color: #f3f3f3;
+    margin: 0;
+}
+
+
