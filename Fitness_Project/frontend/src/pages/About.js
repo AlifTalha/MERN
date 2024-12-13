@@ -1,7 +1,7 @@
 
 import React from "react";
 import "./About.css"; // Custom styles for the About page
-
+import Footer from "../components/Footer";
 const About = () => {
   return (
     <div className="about-page">
@@ -85,6 +85,8 @@ const About = () => {
           />
         </a>
       </div>
+      <Footer />
+
     </div>
   );
 };

@@ -1,4 +1,5 @@
 
+
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../utils/api";
@@ -28,9 +29,9 @@ const Login = () => {
     }
 
     try {
-      const { data } = await loginUser(formData);
-      login(data.token, data.username); // Ensure your API returns token and username
-      setSuccessMessage("Successfully Login!");
+      const { data } = await loginUser(formData); // Assuming the API returns { token, username }
+      login(data.token, data.username); // Pass both token and username to the context
+      setSuccessMessage("Successfully logged in!");
       setTimeout(() => navigate("/dashboard"), 2000); // Redirect after 2 seconds
     } catch (err) {
       setErrorMessage(err.response?.data?.error || "Login failed. Please try again.");

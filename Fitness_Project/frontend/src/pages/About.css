@@ -36,7 +36,7 @@
   .about-us-section {
     margin: 2rem auto;
     padding: 2rem;
-    background-color: #9e8a8a;
+    background-color: #aa8c8c;
     border-radius: 10px;
     text-align: center;
   }
@@ -63,10 +63,10 @@
     flex: 1;
     margin: 0 1rem;
     padding: 1.5rem;
-    background-color: #8ccf97;
+    background-color: #269438;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(144, 26, 26, 0.1);
   }
   
   .info-box h3 {

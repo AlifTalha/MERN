@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import "./BMI.css";
+import Footer from "../components/Footer";
+
 
 const BMI = () => {
   const [gender, setGender] = useState("male");
@@ -152,6 +154,7 @@ const BMI = () => {
           </p>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

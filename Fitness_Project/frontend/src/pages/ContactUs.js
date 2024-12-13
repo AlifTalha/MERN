@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./ContactUs.css";
-
+import Footer from "../components/Footer";
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -134,6 +134,7 @@ const ContactUs = () => {
           </ul>
         )}
       </div>
+      <Footer />
     </div>
   );
 };

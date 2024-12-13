@@ -6,14 +6,7 @@ import { AuthContext } from "../context/AuthContext";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const authContext = useContext(AuthContext);
-
-  if (!authContext) {
-    console.error("AuthContext is not available.");
-    return null;
-  }
-
-  const { token, logout } = authContext;
+  const { token, username, logout } = useContext(AuthContext); // Access username from context
 
   return (
     <nav className="navbar">
@@ -24,11 +17,12 @@ const Navbar = () => {
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact Us</Link>
-        <Link to="/bmi">BMI Calculator</Link> {/* New BMI link */}
+        <Link to="/bmi">BMI Calculator</Link>
       </div>
       <div className="navbar-right">
         {token ? (
           <>
+            <span>Welcome, {username}</span> {/* Display username if logged in */}
             <Link to="/dashboard">Dashboard</Link>
             <button onClick={logout} className="logout-btn">
               Logout

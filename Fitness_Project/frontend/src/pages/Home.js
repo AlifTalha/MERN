@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
+// import Footer from "../components/Footer";
 
 const Home = () => {
   const [quote, setQuote] = useState("");
@@ -60,8 +61,12 @@ const Home = () => {
           <button onClick={() => navigate("/login")}>Login</button>
           <button onClick={() => navigate("/register")}>Register</button>
         </div>
+        {/* <Footer /> */}
       </div>
+    
+
     </div>
+    
   );
 };
 
