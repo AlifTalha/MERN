@@ -1,5 +1,4 @@
 
-
 import React from "react";
 import "./About.css"; // Custom styles for the About page
 

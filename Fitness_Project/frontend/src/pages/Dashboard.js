@@ -1,12 +1,14 @@
 
-
 import React, { useState, useEffect, useContext } from "react";
-import { fetchExercises, addExercise, deleteExercise } from "../utils/api";
+import { Link } from "react-router-dom";
+import { fetchExercises, addExercise, updateExercise, deleteExercise } from "../utils/api";
 import { AuthContext } from "../context/AuthContext";
 import "./Dashboard.css";
 
 const Dashboard = () => {
   const [exercises, setExercises] = useState([]);
+  const [isEditing, setIsEditing] = useState(false);
+  const [editId, setEditId] = useState(null);
   const [formData, setFormData] = useState({
     username: "",
     description: "",
@@ -30,13 +32,52 @@ const Dashboard = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await addExercise(formData);
-    loadExercises();
+
+    const updatedFormData = {
+      ...formData,
+      date: formData.date || exercises.find((ex) => ex._id === editId)?.date,
+    };
+
+    try {
+      if (isEditing) {
+        await updateExercise(editId, updatedFormData);
+        setIsEditing(false);
+        setEditId(null);
+      } else {
+        await addExercise(updatedFormData);
+      }
+
+      setFormData({
+        username: "",
+        description: "",
+        duration: 0,
+        date: "",
+      });
+
+      loadExercises();
+    } catch (err) {
+      console.error("Error saving exercise:", err);
+    }
+  };
+
+  const handleEdit = (exercise) => {
+    setIsEditing(true);
+    setEditId(exercise._id);
+    setFormData({
+      username: exercise.username,
+      description: exercise.description,
+      duration: exercise.duration,
+      date: exercise.date.split("T")[0],
+    });
   };
 
   const handleDelete = async (id) => {
-    await deleteExercise(id);
-    loadExercises();
+    try {
+      await deleteExercise(id);
+      loadExercises();
+    } catch (err) {
+      console.error("Error deleting exercise:", err);
+    }
   };
 
   return (
@@ -52,33 +93,39 @@ const Dashboard = () => {
       <div className="content-overlay">
         <h1>Welcome, {username || "Guest"}!</h1>
 
+        {/* Exercise Form */}
         <form onSubmit={handleSubmit} className="exercise-form">
           <input
             type="text"
             placeholder="Username"
             value={formData.username}
             onChange={(e) => setFormData({ ...formData, username: e.target.value })}
+            required
           />
           <input
             type="text"
             placeholder="Description"
             value={formData.description}
             onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+            required
           />
           <input
             type="number"
             placeholder="Duration (mins)"
             value={formData.duration}
             onChange={(e) => setFormData({ ...formData, duration: e.target.value })}
+            required
           />
           <input
             type="date"
             value={formData.date}
             onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+            required
           />
-          <button type="submit">Add Exercise</button>
+          <button type="submit">{isEditing ? "Update Exercise" : "Add Exercise"}</button>
         </form>
 
+        {/* Exercise Table */}
         <h2>Dashboard</h2>
         <table className="exercise-table">
           <thead>
@@ -96,14 +143,23 @@ const Dashboard = () => {
                 <td>{exercise.username}</td>
                 <td>{exercise.description}</td>
                 <td>{exercise.duration}</td>
-                <td>{exercise.date}</td>
+                <td>{exercise.date.split("T")[0]}</td>
                 <td>
+                  <button
+                    className="edit-button"
+                    onClick={() => handleEdit(exercise)}
+                  >
+                    EDIT
+                  </button>
                   <button
                     className="delete-button"
                     onClick={() => handleDelete(exercise._id)}
                   >
                     DELETE
                   </button>
+                  <Link to={`/details/${exercise._id}`}>
+                    <button className="details-button">DETAILS</button>
+                  </Link>
                 </td>
               </tr>
             ))}
@@ -115,10 +171,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-
-
-
-
-
-
-

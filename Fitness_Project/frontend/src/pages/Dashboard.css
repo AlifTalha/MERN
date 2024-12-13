@@ -85,3 +85,17 @@
 .delete-button:hover {
   text-decoration: underline;
 }
+
+
+.edit-button {
+  color: #ffc107;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.edit-button:hover {
+  text-decoration: underline;
+}

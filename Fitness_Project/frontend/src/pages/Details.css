@@ -1,0 +1,98 @@
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #3d4b49, #acb6e5);
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Details Container */
+  .details-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Title */
+  .details-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4a90e2;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+  /* Paragraph Styles */
+  .details-container p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .details-container p strong {
+    color: #333;
+  }
+  
+  /* Button Styles */
+  button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #357abd;
+  }
+  
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.6);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .details-container {
+      padding: 15px;
+    }
+  
+    .details-container h1 {
+      font-size: 1.5rem;
+    }
+  
+    .details-container p {
+      font-size: 1rem;
+    }
+  
+    button {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
