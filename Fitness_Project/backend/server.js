@@ -18,12 +18,14 @@ app.use(express.json());
 const exercisesRouter = require("./routes/exercises");
 const usersRouter = require("./routes/users");
 const authRouter = require("./routes/auth");
-const commentsRouter = require("./routes/comments"); // Add a new route for comments
+const commentsRouter = require("./routes/comments");
+const resistanceRouter = require("./routes/resistance");
 
 app.use("/exercises", exercisesRouter);
 app.use("/users", usersRouter);
 app.use("/auth", authRouter);
-app.use("/comments", commentsRouter); // Use the comments route
+app.use("/comments", commentsRouter);
+app.use("/resistance", resistanceRouter); // Use the resistance route
 
 // Default route
 app.get("/", (req, res) => {
