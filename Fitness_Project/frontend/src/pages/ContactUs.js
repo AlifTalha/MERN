@@ -14,7 +14,6 @@ const ContactUs = () => {
 
   const [comments, setComments] = useState([]); // State to store comments
 
-  // Fetch comments from the backend
   useEffect(() => {
     const fetchComments = async () => {
       try {
@@ -26,7 +25,7 @@ const ContactUs = () => {
     };
 
     fetchComments();
-  }, []); // Empty dependency array means this will run once when the component is mounted
+  }, []); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,10 +35,8 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Send the new comment to the backend
       await axios.post("http://localhost:5000/comments", formData);
 
-      // Fetch the updated comments list
       const response = await axios.get("http://localhost:5000/comments");
       setComments(response.data);
 
@@ -51,10 +48,8 @@ const ContactUs = () => {
 
   const handleDelete = async (id) => {
     try {
-      // Delete the comment from the backend
       await axios.delete(`http://localhost:5000/comments/${id}`);
 
-      // Fetch the updated comments list
       const response = await axios.get("http://localhost:5000/comments");
       setComments(response.data);
     } catch (err) {

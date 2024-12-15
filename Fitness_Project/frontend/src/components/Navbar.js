@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <Link to="/">MyApp</Link>
+        <Link to="/">Fitness Tracker</Link>
       </div>
       <div className="navbar-center">
         <Link to="/">Home</Link>
@@ -24,6 +24,8 @@ const Navbar = () => {
           <>
             <span>Welcome, {username}</span> {/* Display username if logged in */}
             <Link to="/dashboard">Dashboard</Link>
+            <Link to="/resistance">Resistance</Link>
+
             <button onClick={logout} className="logout-btn">
               Logout
             </button>

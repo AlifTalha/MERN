@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.resistance-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.resistance-form,
+.resistance-list {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px 0;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resistance-form h2,
+.resistance-list h2 {
+  text-align: center;
+  color: #007bff;
+}
+
+.resistance-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.resistance-form input {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.resistance-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.resistance-form button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.resistance-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.resistance-list li {
+  background: #f1f1f1;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.resistance-list h3 {
+  margin: 0 0 5px;
+  color: #333;
+}
+
+.message {
+  color: #28a745;
+  text-align: center;
+  margin-bottom: 15px;
+}

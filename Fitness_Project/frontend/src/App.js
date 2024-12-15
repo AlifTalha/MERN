@@ -12,6 +12,7 @@ import ContactUs from "./pages/ContactUs";
 import BMI from "./pages/BMI"; 
 import Details from "./pages/Details"; // Import Details component
 import AuthProvider from "./context/AuthContext";
+import Resistance from "./pages/Resistance";
 
 const App = () => {
   return (
@@ -26,6 +27,10 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/details/:id" element={<Details />} /> {/* Add Details route */}
+
+
+        <Route path="/resistance" element={<Resistance />} />
+
       </Routes>
     </AuthProvider>
   );

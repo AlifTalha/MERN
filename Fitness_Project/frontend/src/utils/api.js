@@ -28,3 +28,15 @@ export const updateExercise = (id, exerciseData) => API.put(`/exercises/update/$
 
 export const deleteExercise = (id) => API.delete(`/exercises/${id}`);
 export const fetchExerciseById = (id) => API.get(`/exercises/${id}`);
+
+
+
+
+
+
+// Resistance APIs
+export const fetchResistances = () => API.get("/resistance");
+export const addResistance = (resistanceData) => API.post("/resistance", resistanceData);
+export const updateResistance = (id, resistanceData) => API.put(`/resistance/${id}`, resistanceData);
+export const deleteResistance = (id) => API.delete(`/resistance/${id}`);
+export const fetchResistanceById = (id) => API.get(`/resistance/${id}`);

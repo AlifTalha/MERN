@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
-// import Footer from "../components/Footer";
 
 const Home = () => {
   const [quote, setQuote] = useState("");
@@ -23,16 +22,15 @@ const Home = () => {
     setQuote(motivationalQuotes[randomIndex]);
   }, []);
 
-  // Update the live clock every second
   useEffect(() => {
     const timer = setInterval(() => {
       setTime(new Date().toLocaleTimeString());
     }, 1000);
-    return () => clearInterval(timer); // Cleanup interval on component unmount
+    return () => clearInterval(timer); 
   }, []);
 
   useEffect(() => {
-    generateQuote(); // Generate a quote on initial render
+    generateQuote(); 
   }, [generateQuote]);
 
   return (
@@ -40,7 +38,7 @@ const Home = () => {
       {/* Video Background */}
       <video autoPlay loop muted className="background-video">
         <source
-          src="https://cdn.pixabay.com/video/2023/01/27/148208-793717949_tiny.mp4" // Example video URL
+          src="https://videos.pexels.com/video-files/6390166/6390166-sd_640_360_25fps.mp4" // Example video URL
           type="video/mp4"
         />
         Your browser does not support the video tag.
