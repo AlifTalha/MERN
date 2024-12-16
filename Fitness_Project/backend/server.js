@@ -21,6 +21,16 @@ const authRouter = require("./routes/auth");
 const commentsRouter = require("./routes/comments");
 const resistanceRouter = require("./routes/resistance");
 
+const workoutRoutes = require('./routes/workouts')
+app.use(express.json())
+app.use((req,res,next) => {
+    console.log(req.path, req.method)
+    next()
+})
+
+app.use('/api/workouts',workoutRoutes)
+
+
 app.use("/exercises", exercisesRouter);
 app.use("/users", usersRouter);
 app.use("/auth", authRouter);
