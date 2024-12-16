@@ -1,0 +1,86 @@
+
+
+   /* workouts.css */
+
+   body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://img.freepik.com/free-photo/painted-concrete-background_53876-92961.jpg?t=st=1734369063~exp=1734372663~hmac=d712563502d51c5d32e46df69942d7e2c47b2f715dea5c54752a7fe4cf848739&w=996'); /* Replace with the actual image path */
+    background-size: cover; /* Ensure the image covers the viewport */
+    background-repeat: no-repeat; /* Prevent repetition */
+    background-attachment: fixed; /* Keep the image fixed during scrolling */
+    background-position: center; /* Center the image */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.workout-list-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgba(173, 130, 130, 0.9); /* Semi-transparent white background for better text visibility */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+  
+  h2 {
+    text-align: center;
+    color: #2c3e50;
+  }
+  
+  .workouts-section {
+    margin-bottom: 20px;
+  }
+  
+  .workouts-section p {
+    text-align: center;
+    font-style: italic;
+    color: #7f8c8d;
+  }
+  
+  .add-workout-form {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #6d8c9b;
+  }
+  
+  .success-message {
+    text-align: center;
+    background-color: #98e3a9;
+    color: #155724;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #0b160e;
+    border-radius: 4px;
+  }
+  
+  .workout-form label {
+    display: block;
+    margin-top: 10px;
+    color: #2c3e50;
+  }
+  
+  .workout-form input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px;
+    border: 1px solid #a49292;
+    border-radius: 4px;
+  }
+  
+  .workout-form button {
+    padding: 10px 15px;
+    background-color: #1f9b0c;
+    color: #fefffe;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .workout-form button:hover {
+    background-color: #1a252f;
+  }
+  
