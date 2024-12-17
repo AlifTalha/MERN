@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import "./BMI.css";
 import Footer from "../components/Footer";
 
-
 const BMI = () => {
   const [gender, setGender] = useState("male");
   const [age, setAge] = useState("");
@@ -14,6 +13,7 @@ const BMI = () => {
   const [bmi, setBmi] = useState(null);
   const [bmiCategory, setBmiCategory] = useState("");
 
+  // Function to calculate BMI
   const calculateBMI = () => {
     if (!heightFeet || !weight || !age) {
       alert("Please fill in all required fields.");
@@ -32,6 +32,17 @@ const BMI = () => {
     } else {
       setBmiCategory("Obesity");
     }
+  };
+
+  // Function to clear all input fields and results
+  const clearData = () => {
+    setGender("male");
+    setAge("");
+    setHeightFeet("");
+    setHeightInches("");
+    setWeight("");
+    setBmi(null);
+    setBmiCategory("");
   };
 
   return (
@@ -94,9 +105,14 @@ const BMI = () => {
             placeholder="in Kgs"
           />
         </div>
-        <button className="calculate-button" onClick={calculateBMI}>
-          Calculate
-        </button>
+        <div className="button-group">
+          <button className="calculate-button" onClick={calculateBMI}>
+            Calculate
+          </button>
+          <button className="clear-button" onClick={clearData}>
+            Clear
+          </button>
+        </div>
       </div>
       <div className="bmi-result">
         <h2>Your BMI is</h2>
@@ -160,3 +176,4 @@ const BMI = () => {
 };
 
 export default BMI;
+

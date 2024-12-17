@@ -230,3 +230,30 @@ body {
     background-color: #3c3c3c;
   }
   
+
+  .button-group {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    gap: 20px; /* Add space between buttons */
+    margin-top: 20px;
+  }
+  
+  .calculate-button, .clear-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .clear-button {
+    background-color: #ff6b6b;
+  }
+  
+  .calculate-button:hover, .clear-button:hover {
+    opacity: 0.8;
+  }
+  

@@ -18,7 +18,7 @@
     padding: 20px;
     max-width: 800px;
     margin: 20px auto;
-    background-color: rgba(173, 130, 130, 0.9); /* Semi-transparent white background for better text visibility */
+    background-color: rgba(173, 130, 130, 0.9); 
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

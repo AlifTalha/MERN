@@ -20,7 +20,7 @@ const About = () => {
 
       {/* About Us Section */}
       <div className="about-us-section">
-        <h2 style={{ color: 'Blue' }}>About Us</h2>
+        <h2 style={{ color: 'white' }}>About Us</h2>
         <p>
           Welcome to the Fitness Tracker! This platform is designed to help you
           track your fitness journey with ease. Stay motivated, track your

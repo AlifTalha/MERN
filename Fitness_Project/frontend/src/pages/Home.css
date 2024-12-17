@@ -1,71 +1,188 @@
+/* General Layout */
 .home-container {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #eed9d9;
+  padding: 20px;
 }
 
-/* Video background */
-.background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the video covers the entire container */
-  z-index: -1; /* Places the video behind the content */
-}
-
-.overlay {
-  background: rgba(0, 0, 0, 0.6); /* Add a semi-transparent background for text clarity */
-  padding: 30px;
-  border-radius: 10px;
+/* Header Styling */
+.home-header {
   text-align: center;
-  max-width: 600px;
-  width: 90%;
-}
-
-.quote {
-  font-style: italic;
-  margin: 20px 0;
-  font-size: 1.2rem;
-}
-
-.generate-quote-btn,
-.navigation-buttons button {
-  background-color: #28a745;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 10px 5px;
-  font-size: 1rem;
-}
-
-.generate-quote-btn:hover,
-.navigation-buttons button:hover {
-  background-color: #218838;
-}
-
-.navigation-buttons button {
-  background-color: #007bff;
-}
-
-.navigation-buttons button:hover {
-  background-color: #0056b3;
-}
-
-.navigation-buttons {
-  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #1d4432;
 }
 
 .live-clock {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #00ff00;
-  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #ce1111;
+}
+
+/* Workout Cards */
+.workout-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: #65a69b;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
+  padding: 10px;
+  width: 200px;
+}
+
+.card img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+/* Weekly Summary and Food Chart */
+.summary-food-section {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.weekly-summary,
+.food-chart {
+  background: #ba997f;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 45%;
+}
+
+.chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 150px;
+}
+
+.bar {
+  background-color: #ff6b6b;
+  width: 30px;
+  position: relative;
+}
+
+.bar.active {
+  background-color: #6c63ff;
+}
+
+.bar span {
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* .line-chart {
+  position: relative;
+  height: 150px;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+} */
+.line-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ba997f;
+  border-radius: 10px;
+  padding: 15px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.graph-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 18px;
+  margin-bottom: 10px;
+}
+
+.calorie-point {
+  font-size: 14px;
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+
+.calorie-point {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  background-color: #ff6b6b;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Scheduled Section */
+.scheduled {
+  margin-top: 30px;
+}
+
+.scheduled-items {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.scheduled-card {
+  background: #97c393;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 150px;
+}
+
+.badge {
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 3px 7px;
+}
+
+.badge.workout {
+  background-color: #6c63ff;
+  color: white;
+}
+
+.badge.cardio {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.badge.food {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Footer Navigation Buttons */
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.navigation-buttons button {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.navigation-buttons button:hover {
+  background-color: #574bff;
 }
