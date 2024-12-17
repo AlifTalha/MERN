@@ -37,6 +37,7 @@ app.use("/auth", authRouter);
 app.use("/comments", commentsRouter);
 app.use("/resistance", resistanceRouter); // Use the resistance route
 
+
 // Default route
 app.get("/", (req, res) => {
   res.send("Hello to Fitness Tracker API");
