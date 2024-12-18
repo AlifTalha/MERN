@@ -34,6 +34,8 @@ Registration Page:
 Dashboard:
 ![Screenshot 2024-12-18 215721](https://github.com/user-attachments/assets/69b30268-88eb-41e4-b806-79b5c5dcf4bb)
 
+Workout:
+![Screenshot 2024-12-18 220043](https://github.com/user-attachments/assets/9cb7a81c-2fdb-4aa1-be6a-4a00eac2632b)
 
 
 
