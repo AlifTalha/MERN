@@ -22,4 +22,7 @@ About Page:
 Contact Us:
 ![Screenshot 2024-12-18 214938](https://github.com/user-attachments/assets/2a3266e2-7863-4998-93ef-a2d1238134ca)
 
+BMI Calculator:
+![Screenshot 2024-12-18 215124](https://github.com/user-attachments/assets/544427d6-6f3c-4661-badc-63667d5a4c0b)
+
 
