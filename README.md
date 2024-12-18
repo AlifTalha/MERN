@@ -31,6 +31,8 @@ Login Page:
 Registration Page:
 ![Screenshot 2024-12-18 215501](https://github.com/user-attachments/assets/ad7d8a2a-9daa-41d2-8fd0-4683199a6d54)
 
+Dashboard:
+![Screenshot 2024-12-18 215721](https://github.com/user-attachments/assets/69b30268-88eb-41e4-b806-79b5c5dcf4bb)
 
 
 
