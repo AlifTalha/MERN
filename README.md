@@ -37,6 +37,8 @@ Dashboard:
 Workout:
 ![Screenshot 2024-12-18 220043](https://github.com/user-attachments/assets/9cb7a81c-2fdb-4aa1-be6a-4a00eac2632b)
 
+Resistance:
+![Screenshot 2024-12-18 221743](https://github.com/user-attachments/assets/ee4fa371-31f5-4338-8db4-147f0c850555)
 
 
 
