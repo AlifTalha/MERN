@@ -17,5 +17,7 @@ JWT Authentication
 Home Page:
 ![Screenshot 2024-12-18 214121](https://github.com/user-attachments/assets/93f24e96-68ae-49be-92e5-63b302ac78f7)
 
+About Page:
+![Screenshot 2024-12-18 214758](https://github.com/user-attachments/assets/c3b6c37f-c540-4d80-96b5-e061e5ff8c01)
 
 
