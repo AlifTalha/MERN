@@ -28,6 +28,8 @@ BMI Calculator:
 Login Page:
 ![Screenshot 2024-12-18 215258](https://github.com/user-attachments/assets/a0b39e49-d7cf-4d7a-be52-4bbd8805d571)
 
+Registration Page:
+![Screenshot 2024-12-18 215501](https://github.com/user-attachments/assets/ad7d8a2a-9daa-41d2-8fd0-4683199a6d54)
 
 
 
